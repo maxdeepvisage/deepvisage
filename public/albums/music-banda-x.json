@@ -1,0 +1,9 @@
+{
+  "title": "Show Banda X",
+  "description": "Cobertura do show da Banda X.",
+  "images": [
+    { "url": "/assets/images/music/banda-x-1.jpg", "caption": "Palco iluminado" },
+    { "url": "/assets/images/music/banda-x-2.jpg", "caption": "Solo de guitarra" },
+    { "url": "/assets/images/music/banda-x-3.jpg", "caption": "Público animado" }
+  ]
+}

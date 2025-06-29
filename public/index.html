@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEEP VISAGE - Photography Portfolio in Dublin, Ireland</title>
+    <meta name="description" content="Deep Visage - Professional photography portfolio in Dublin, Ireland. Specializing in wedding, portrait, and commercial photography. Capture your most important moments with artistry and emotion. Based in Dublin, serving all Ireland.">
+    <meta name="keywords" content="photography, photographer, Dublin, Ireland, wedding photography, portrait photography, commercial photography, event photography, professional photographer, photo portfolio, creative photography, Dublin photographer, Ireland photographer, wedding, portrait, commercial, branding, family, couples, business, photoshoot, artistic, deep visage">
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Deep Visage - Photography Portfolio in Dublin, Ireland">
+    <meta property="og:description" content="Professional photography portfolio specializing in wedding, portrait, and commercial photography. Based in Dublin, serving all Ireland.">
+    <meta property="og:image" content="assets/deepvisage-logo.png">
+    <meta property="og:url" content="https://deepvisage.com/">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Deep Visage - Photography Portfolio in Dublin, Ireland">
+    <meta name="twitter:description" content="Professional photography portfolio specializing in wedding, portrait, and commercial photography. Based in Dublin, serving all Ireland.">
+    <meta name="twitter:image" content="assets/deepvisage-logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+      <!-- Navigation -->
+      <nav class="nav" role="navigation" aria-label="Main Navigation">
+        <div class="nav-content">
+          <a href="index.html" class="logo" style="flex: none; align-items: flex-start; text-align: left;">
+            <img src="assets/deepvisage-logo.png" alt="Deep Visage Logo - Home" class="logo-img" loading="lazy">
+          </a>
+          <div class="logo-text nav-center">DEEP VISAGE</div>
+          <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Main Container -->
+    <main class="main-container">
+      <!-- Mobile/Tablet Layout -->
+      <div class="mobile-main-block">
+        <div class="mobile-top-row" style="display: flex; flex-direction: row; align-items: flex-start;">
+          <div class="gallery-section" style="flex: 1;">
+            <h1 class="gallery-title">CATEGORIES</h1>
+            <p class="gallery-subtitle">Find what you're looking for here</p>
+            <div class="gallery-carousel-wrapper">
+              <div class="vertical-gallery" id="verticalGalleryMobile">
+                <!-- Gallery items will be inserted here by JavaScript -->
+              </div>
+            </div>
+          </div>
+          <div class="hero-preview" style="flex: 1;">
+            <div class="preview-container">
+              <div class="preview-stack" id="previewStackMobile">
+                <!-- Preview image will be inserted here by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-preview-info-wrapper" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 24px;">
+          <div class="preview-info" id="previewInfoMobile" style="text-align: center;">
+            <h2 class="preview-category">Wedding Photography</h2>
+            <p class="preview-description">Capturing the most important day of your life with elegance and emotion</p>
+            <button class="explore-btn" aria-label="Explore Wedding Photography Gallery">Explore Gallery</button>
+          </div>
+        </div>
+      </div>
+      <!-- Desktop Layout -->
+      <div class="hero-row">
+        <div class="gallery-section">
+          <h2 class="gallery-title">CATEGORIES</h2>
+          <p class="gallery-subtitle">Find what you're looking for here</p>
+          <div class="gallery-controls">
+            <!-- Removido apenas as setas (SVGs) dos botões, mantendo a estrutura dos botões -->
+            <button class="control-btn" id="prevBtn" aria-label="Previous category"></button>
+            <button class="control-btn" id="nextBtn" aria-label="Next category"></button>
+          </div>
+          <div class="gallery-carousel-wrapper">
+            <div class="vertical-gallery" id="verticalGallery">
+              <!-- Gallery items will be inserted here by JavaScript -->
+            </div>
+          </div>
+        </div>
+        <div class="middle-content">
+          <div class="preview-info" id="previewInfo">
+            <h2 class="preview-category">Wedding Photography</h2>
+            <p class="preview-description">Capturing the most important day of your life with elegance and emotion</p>
+            <button class="explore-btn" aria-label="Explore Wedding Photography Gallery">Explore Gallery</button>
+          </div>
+        </div>
+        <div class="hero-preview">
+          <div class="preview-container">
+            <div class="preview-stack" id="previewStack">
+              <!-- Preview image will be inserted here by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Sections -->
+      <div class="bottom-sections">
+          <!-- Process Section (centralizado) -->
+          <section class="process-section">
+            <div class="process-title">
+              <span>PROCESS</span>
+            </div>
+            <div class="process-flow">
+              <div class="process-line"></div>
+              <div class="process-step fade-in">
+                <div class="process-number">01</div>
+                <div class="process-content">
+                  <h3 class="process-name">consultation</h3>
+                  <p class="process-description">
+                    I analyze your vision and identify the core message and emotional direction for your project.
+                  </p>
+                </div>
+              </div>
+              <div class="process-step fade-in">
+                <div class="process-number">02</div>
+                <div class="process-content">
+                  <h3 class="process-name">concept</h3>
+                  <p class="process-description">
+                    I create unique concepts for each shoot, from lighting ideas to location scouting and creative direction.
+                  </p>
+                </div>
+              </div>
+              <div class="process-step fade-in">
+                <div class="process-number">03</div>
+                <div class="process-content">
+                  <h3 class="process-name">production</h3>
+                  <p class="process-description">
+                    I execute the vision with professional equipment and ensure every shot captures the intended narrative.
+                  </p>
+                </div>
+              </div>
+              <div class="process-step fade-in">
+                <div class="process-number">04</div>
+                <div class="process-content">
+                  <h3 class="process-name">delivery</h3>
+                  <p class="process-description">
+                    I provide professional editing and deliver content ready to share with the world.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Nova seção Investment com cards estáticos -->
+          <section class="photography-services-section">
+            <div class="photography-services-container">
+              <div class="photography-services-header">
+                <h2 class="photography-services-title">Photography Services</h2>
+                <p class="photography-services-subtitle">Professional photography packages tailored to capture your most important moments</p>
+              </div>
+              <div class="photography-cards-wrapper">
+                <!-- Card 1 -->
+                <div class="photography-card">
+                  <div class="card-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <title>Portrait Icon</title>
+                      <circle cx="12" cy="8" r="4"/>
+                      <path d="M4 20c0-4 8-4 8-4s8 0 8 4"/>
+                    </svg>
+                  </div>
+                  <div class="card-overlay">
+                    <span class="card-badge">Portrait</span>
+                    <h3 class="card-title">Portrait Session</h3>
+                    <p class="card-desc">Professional portraits for individuals, couples, and families with natural lighting and creative compositions.</p>
+                    <div class="card-badges-row">
+                      <span class="card-badge-secondary">2-hour session</span>
+                      <span class="card-badge-secondary">50+ edited images</span>
+                    </div>
+                    <div class="card-price-row">
+                      <span class="card-price">€499</span>
+                      <span class="card-price-period">Complete</span>
+                    </div>
+                    <a href="#" class="card-btn" aria-label="Book Portrait Session">Book Now</a>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="photography-card">
+                  <div class="card-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <title>Wedding Icon</title>
+                      <circle cx="9" cy="15" r="5"/>
+                      <circle cx="15" cy="9" r="5"/>
+                    </svg>
+                  </div>
+                  <div class="card-overlay">
+                    <span class="card-badge">Most Popular</span>
+                    <h3 class="card-title">Wedding Package</h3>
+                    <p class="card-desc">Complete wedding day coverage from preparation to celebration, documenting every precious moment of your special day.</p>
+                    <div class="card-badges-row">
+                      <span class="card-badge-secondary">8-10h coverage</span>
+                      <span class="card-badge-secondary">500+ professional photos</span>
+                    </div>
+                    <div class="card-price-row">
+                      <span class="card-price">€2,999</span>
+                      <span class="card-price-period">Premium</span>
+                    </div>
+                    <a href="#" class="card-btn" aria-label="Book Wedding Package">Book Now</a>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="photography-card">
+                  <div class="card-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <title>Commercial Icon</title>
+                      <rect x="3" y="7" width="18" height="13" rx="2"/>
+                      <path d="M9 22V12h6v10"/>
+                    </svg>
+                  </div>
+                  <div class="card-overlay">
+                    <span class="card-badge">Business</span>
+                    <h3 class="card-title">Commercial</h3>
+                    <p class="card-desc">Professional business photography for restaurants, events, corporate headshots, and brand marketing campaigns.</p>
+                    <div class="card-badges-row">
+                      <span class="card-badge-secondary">Custom project</span>
+                      <span class="card-badge-secondary">Event coverage</span>
+                    </div>
+                    <div class="card-price-row">
+                      <span class="card-price">Custom</span>
+                      <span class="card-price-period">Quote Based</span>
+                    </div>
+                    <a href="#" class="card-btn" aria-label="Get Commercial Quote">Get Quote</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Dots para slider mobile -->
+              <div class="photography-cards-dots">
+                <span class="photography-cards-dot active"></span>
+                <span class="photography-cards-dot"></span>
+                <span class="photography-cards-dot"></span>
+              </div>
+            </div>
+          </section>
+          <!-- Testimonials Section -->
+          <section class="testimonials-section">
+        <div class="testimonials-container">
+          <h2 class="testimonials-title">What Clients Say</h2>
+          <div class="testimonials-slider-wrapper">
+            <div class="testimonials-slider" id="testimonialsSlider">
+              <div class="testimonial-card">
+                <p class="testimonial-text">“Max captured our wedding with such emotion and artistry. Every photo tells a story. Highly recommended!”</p>
+                <div class="testimonial-author">— Anna & Liam</div>
+              </div>
+              <div class="testimonial-card">
+                <p class="testimonial-text">“The portraits were beyond our expectations. Professional, creative, and easy to work with.”</p>
+                <div class="testimonial-author">— Julia S.</div>
+              </div>
+              <div class="testimonial-card">
+                <p class="testimonial-text">“Our brand photoshoot was smooth and the results elevated our marketing. Will hire again!”</p>
+                <div class="testimonial-author">— Café Aroma</div>
+              </div>
+            </div>
+            <div class="testimonials-dots" id="testimonialsDots">
+              <span class="testimonials-dot active"></span>
+              <span class="testimonials-dot"></span>
+              <span class="testimonials-dot"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+    <footer id="footer-placeholder" tabindex="0" aria-label="Site Footer"></footer>
+    <script>
+      fetch('footer.html')
+        .then(res => {
+          if (!res.ok) throw new Error('Footer not found');
+          return res.text();
+        })
+        .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+        .catch(err => {
+          console.warn('Could not load footer:', err.message);
+          document.getElementById('footer-placeholder').innerHTML = '<div class="footer-error" style="text-align:center;color:#888;font-size:0.9em;">Footer unavailable</div>';
+        });
+    </script>
+    <!--
+      JavaScript dependencies (classes/IDs):
+      - .photography-cards-wrapper: Wrapper for photography cards slider (horizontal scroll)
+      - .photography-cards-dot: Dots for slider navigation (NodeList)
+      - .photography-card: Individual card elements (used for width calculation)
+      - #footer-placeholder: Footer container for dynamic HTML injection
+      - .control-btn, #prevBtn, #nextBtn, #prevBtnMobile, #nextBtnMobile: Navigation buttons (gallery)
+      - #verticalGallery, #verticalGalleryMobile: Gallery containers (JS inserts items)
+      - #previewStack, #previewStackMobile: Preview image containers (JS inserts items)
+      - .explore-btn: Explore Gallery buttons
+      - .testimonials-dot, #testimonialsDots: Dots for testimonials slider
+      - #testimonialsSlider: Testimonials slider container
+      - window, document: Used for event listeners (resize, DOMContentLoaded)
+    -->
+    <script>
+// Slider dots dinâmicos para a seção de cards de fotografia (mobile)
+document.addEventListener('DOMContentLoaded', function() {
+  const wrapper = document.querySelector('.photography-cards-wrapper');
+  const dots = document.querySelectorAll('.photography-cards-dot');
+  if (!wrapper || dots.length === 0) return;
+
+  // Função para atualizar o dot ativo
+  function updateActiveDot() {
+    const cards = document.querySelectorAll('.photography-card');
+    if (!cards.length) return;
+    const scrollLeft = wrapper.scrollLeft;
+    const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(wrapper).gap || 0);
+    // Calcula o índice do card mais à esquerda visível (ajuste para garantir alinhamento com o início do card)
+    let idx = Math.round(scrollLeft / cardWidth);
+    idx = Math.max(0, Math.min(idx, dots.length - 1));
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === idx));
+  }
+
+  // Garante que o scroll alinhe o card à esquerda
+  function scrollToCard(i) {
+    const cards = document.querySelectorAll('.photography-card');
+    if (!cards.length) return;
+    const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(wrapper).gap || 0);
+    wrapper.scrollTo({ left: i * cardWidth, behavior: 'smooth' });
+  }
+
+  // Atualiza ao rolar
+  wrapper.addEventListener('scroll', updateActiveDot);
+  // Atualiza ao redimensionar
+  window.addEventListener('resize', updateActiveDot);
+  // Inicializa com o primeiro dot ativo
+  updateActiveDot();
+
+  // Clique nos dots para navegar
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => scrollToCard(i));
+  });
+});
+</script>
+<!--
+      Sugestões de Melhoria para Expansão:
+      - Para cada nova página, adicione meta tags Open Graph/Twitter Card específicas (title, description, image, url) para melhor compartilhamento social e SEO.
+      - Se o projeto crescer, considere migrar para um template engine (Nunjucks, EJS) ou framework estático (Astro, Eleventy) para facilitar manutenção e reuso de componentes.
+      - Ao adicionar formulários, implemente validação no front-end (HTML5, JS) e back-end, e utilize honeypot ou reCAPTCHA para evitar spam e ataques.
+      - Para maior segurança, implemente uma Content Security Policy (CSP) no servidor para mitigar XSS e outros ataques de injeção.
+      - Para internacionalização, planeje a estrutura de arquivos e textos para fácil tradução (ex: arquivos JSON de idiomas, libs como i18next ou uso de frameworks que suportam i18n).
+    -->
+  </body>
+</html>

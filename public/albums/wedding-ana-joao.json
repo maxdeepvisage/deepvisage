@@ -1,0 +1,9 @@
+{
+  "title": "Casamento Ana & João",
+  "description": "Momentos especiais do casamento de Ana & João.",
+  "images": [
+    { "url": "/assets/images/wedding/ana-joao-1.jpg", "caption": "Entrada da noiva" },
+    { "url": "/assets/images/wedding/ana-joao-2.jpg", "caption": "Primeiro beijo" },
+    { "url": "/assets/images/wedding/ana-joao-3.jpg", "caption": "Dança dos noivos" }
+  ]
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wedding photography portfolio by Deep Visage. Artistic and emotional wedding moments captured in Dublin and all Ireland. See real weddings and book your session.">
+    <title>Wedding Photography - Deep Visage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Wedding Category Page - Custom Styles */
+        .page-title-section {height: 44vh; min-height: 220px; display: flex; align-items: center; justify-content: center; background: #000 !important; position: relative;}
+        .page-title-content {text-align: center;}
+        .page-title {font-size: 48px;font-weight: 300;letter-spacing: 6px;color: #fff;text-transform: uppercase;margin: 0;}
+        .wedding-section {position: relative;min-height: 320px;display: flex;align-items: center;justify-content: center;cursor: pointer;overflow: hidden;transition: all 0.6s ease;margin-bottom: 32px;border-radius: 18px;box-shadow: 0 4px 24px rgba(0,0,0,0.10);}
+        .wedding-section::before {content: '';position: absolute;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.4);transition: all 0.6s ease;z-index: 2;}
+        .wedding-section:hover::before {background: rgba(0,0,0,0.2);}
+        .wedding-bg {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-size: cover;background-position: center;transition: transform 0.6s ease;z-index: 1;}
+        .wedding-section:hover .wedding-bg {transform: scale(1.05);}
+        .wedding-content {position: relative;z-index: 3;text-align: center;color: white;transition: all 0.6s ease;}
+        .wedding-title {font-size: 48px;font-weight: 300;letter-spacing: 4px;text-transform: uppercase;margin-bottom: 20px;opacity: 0.9;transition: all 0.6s ease;}
+        .wedding-subtitle {font-size: 16px;letter-spacing: 2px;text-transform: uppercase;opacity: 0.7;transition: all 0.6s ease;}
+        .wedding-section:hover .wedding-title {font-size: 52px;opacity: 1;transform: translateY(-5px);}
+        .wedding-section:hover .wedding-subtitle {opacity: 1;transform: translateY(5px);}
+        .selection-indicator {position: absolute;bottom: 30px;left: 50%;transform: translateX(-50%);width: 0;height: 2px;background: white;transition: width 0.6s ease;z-index: 4;}
+        .wedding-section:hover .selection-indicator {width: 100px;}
+        .touch-indicator {position: absolute;top: 50%;right: 30px;transform: translateY(-50%);width: 30px;height: 30px;border: 2px solid rgba(255,255,255,0.3);border-radius: 50%;opacity: 0;transition: all 0.3s ease;z-index: 4;}
+        .touch-indicator::after {content: '';position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 0;height: 0;border-left: 6px solid rgba(255,255,255,0.6);border-top: 4px solid transparent;border-bottom: 4px solid transparent;}
+        @media (max-width: 768px) {.page-title {font-size: 28px;letter-spacing: 3px;}.wedding-title {font-size: 32px;letter-spacing: 2px;}.wedding-subtitle {font-size: 14px;}.wedding-section:hover .wedding-title {font-size: 34px;}.touch-indicator {opacity: 1;animation: pulse 2s infinite;}}
+        @keyframes pulse {0%,100%{opacity:0.3;}50%{opacity:0.7;}}
+        html {scroll-behavior: smooth;}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="logo" style="flex: none; align-items: flex-start; text-align: left;">
+                <img src="assets/deepvisage-logo.png" alt="Deep Visage Logo" class="logo-img">
+            </a>
+            <div class="logo-text nav-center">DEEP VISAGE</div>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+    <!-- Page Title Section -->
+    <section class="page-title-section">
+        <div class="page-title-content">
+            <h1 class="page-title">WEDDING PHOTOGRAPHY</h1>
+        </div>
+    </section>
+    <!-- Wedding 1: Julia & Dom -->
+    <section class="wedding-section" role="button" tabindex="0" onclick="openWeddingGallery('julia-dom')">
+        <div class="wedding-bg" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="wedding-content">
+            <h2 class="wedding-title">Julia & Dom</h2>
+            <p class="wedding-subtitle">Wedding Photography</p>
+        </div>
+        <div class="selection-indicator"></div>
+        <div class="touch-indicator"></div>
+    </section>
+    <!-- Wedding 2: Luiza & Daniel -->
+    <section class="wedding-section" role="button" tabindex="0" onclick="openWeddingGallery('luiza-daniel')">
+        <div class="wedding-bg" style="background-image: url('https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="wedding-content">
+            <h2 class="wedding-title">Luiza & Daniel</h2>
+            <p class="wedding-subtitle">Wedding Photography</p>
+        </div>
+        <div class="selection-indicator"></div>
+        <div class="touch-indicator"></div>
+    </section>
+    <!-- Wedding 3: Maria & João -->
+    <section class="wedding-section" role="button" tabindex="0" onclick="openWeddingGallery('maria-joao')">
+        <div class="wedding-bg" style="background-image: url('https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="wedding-content">
+            <h2 class="wedding-title">Maria & João</h2>
+            <p class="wedding-subtitle">Wedding Photography</p>
+        </div>
+        <div class="selection-indicator"></div>
+        <div class="touch-indicator"></div>
+    </section>
+    <!-- Wedding 4: Ana & Pedro -->
+    <section class="wedding-section" role="button" tabindex="0" onclick="openWeddingGallery('ana-pedro')">
+        <div class="wedding-bg" style="background-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="wedding-content">
+            <h2 class="wedding-title">Ana & Pedro</h2>
+            <p class="wedding-subtitle">Wedding Photography</p>
+        </div>
+        <div class="selection-indicator"></div>
+        <div class="touch-indicator"></div>
+    </section>
+    <!-- Wedding 5: Carla & Thiago -->
+    <section class="wedding-section" role="button" tabindex="0" onclick="openWeddingGallery('carla-thiago')">
+        <div class="wedding-bg" style="background-image: url('https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="wedding-content">
+            <h2 class="wedding-title">Carla & Thiago</h2>
+            <p class="wedding-subtitle">Wedding Photography</p>
+        </div>
+        <div class="selection-indicator"></div>
+        <div class="touch-indicator"></div>
+    </section>
+    <div id="footer-placeholder"></div>
+    </main>
+    <script>
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+    </script>
+    <script>
+        // Função para abrir a galeria do ensaio
+        function openWeddingGallery(weddingId) {
+            // Substitua pelo redirecionamento real da galeria
+            window.location.href = `gallery.html?wedding=${weddingId}`;
+        }
+        // Mobile touch detection
+        function isMobile() { return window.innerWidth <= 768; }
+        // Interação mobile
+        if (isMobile()) {
+            document.querySelectorAll('.wedding-section').forEach(section => {
+                section.addEventListener('touchstart', function() { this.style.transform = 'scale(0.98)'; });
+                section.addEventListener('touchend', function() { this.style.transform = 'scale(1)'; });
+            });
+        }
+    </script>
+</body>
+</html>

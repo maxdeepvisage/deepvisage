@@ -1,0 +1,9 @@
+{
+  "title": "Retratos Maria",
+  "description": "Ensaio de retratos com Maria.",
+  "images": [
+    { "url": "/assets/images/portraits/maria-1.jpg", "caption": "Sorriso natural" },
+    { "url": "/assets/images/portraits/maria-2.jpg", "caption": "Luz suave" },
+    { "url": "/assets/images/portraits/maria-3.jpg", "caption": "Expressão serena" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Evento Corporativo Y",
+  "description": "Registros do evento corporativo Y.",
+  "images": [
+    { "url": "/assets/images/corporate/evento-y-1.jpg", "caption": "Palestra de abertura" },
+    { "url": "/assets/images/corporate/evento-y-2.jpg", "caption": "Networking" },
+    { "url": "/assets/images/corporate/evento-y-3.jpg", "caption": "Equipe reunida" }
+  ]
+}

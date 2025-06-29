@@ -1,0 +1,9 @@
+{
+  "title": "Ensaio Café Z",
+  "description": "Ensaio fotográfico no Café Z.",
+  "images": [
+    { "url": "/assets/images/coffee/cafe-z-1.jpg", "caption": "Ambiente aconchegante" },
+    { "url": "/assets/images/coffee/cafe-z-2.jpg", "caption": "Detalhes do café" },
+    { "url": "/assets/images/coffee/cafe-z-3.jpg", "caption": "Barista em ação" }
+  ]
+}

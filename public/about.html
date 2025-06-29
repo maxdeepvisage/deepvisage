@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Deep Visage</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="about/about.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #000000;
+      color: #ffffff;
+      line-height: 1.4;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(20px);
+      z-index: 1000;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+      /* Removido filter: invert(1); para garantir visibilidade */
+    }
+
+    .logo-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #ffffff;
+    }
+
+    .back-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 6px 16px 6px 0;
+      border-radius: 24px;
+      transition: background 0.18s, color 0.18s;
+    }
+
+    .back-btn:hover {
+      background: #181818;
+      color: #e0e0e0;
+    }
+
+    .back-arrow {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-right: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a.active {
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #ffffff;
+    }
+
+    /* Main Container */
+    .about-container {
+      margin-top: 80px;
+      min-height: 100vh;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 6rem 2rem 4rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-images {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+    }
+
+    .hero-image {
+      width: 120px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      opacity: 0.8;
+      transition: all 0.3s ease;
+    }
+
+    .hero-image-horizontal {
+      width: 180px !important;
+      height: 100px !important;
+      object-fit: cover;
+      border-radius: 8px;
+      opacity: 0.85;
+    }
+
+    .hero-image:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    .hero-image:nth-child(3) {
+      width: 100px;
+      height: 140px;
+      align-self: flex-end;
+    }
+
+    .hero-title {
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 900;
+      line-height: 0.9;
+      margin-bottom: 3rem;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: #888888;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-description {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      line-height: 1.3;
+      max-width: 800px;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      color: #ffffff;
+    }
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: #cccccc;
+      font-style: italic;
+      margin-top: 2rem;
+    }
+
+    /* Team Section */
+    .team-section {
+      padding: 6rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .team-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 4rem;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .team-grid {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+
+    .profile-card {
+      background: #111111;
+      border: 1px solid #222222;
+      border-radius: 12px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .profile-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #ffffff;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+      border-color: #333333;
+    }
+
+    .profile-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 3px solid #333333;
+      transition: all 0.3s ease;
+    }
+
+    .profile-card:hover .profile-image {
+      border-color: #ffffff;
+    }
+
+    .profile-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .profile-role {
+      font-size: 0.9rem;
+      color: #888888;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .profile-bio {
+      color: #cccccc;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 6rem 2rem;
+      text-align: center;
+      max-width: 1400px;
+      margin: 0 auto;
+      border-top: 1px solid #222222;
+    }
+
+    .contact-title {
+      font-size: 1.2rem;
+      color: #cccccc;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2.5rem;
+      background: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-btn:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-btn {
+      background: #000000;
+      color: #ffffff;
+      border: 1px solid #333333;
+    }
+
+    .whatsapp-btn:hover {
+      background: #111111;
+      border-color: #555555;
+    }
+
+    .whatsapp-note {
+      background: #111111;
+      border: 1px solid #333333;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 2rem auto;
+      max-width: 500px;
+      font-size: 0.85rem;
+      color: #888888;
+      text-align: left;
+    }
+
+    /* Contact Section (final, personalizada) */
+    .contact-direct {
+      padding: 4rem 2rem;
+      text-align: center;
+      max-width: 1400px;
+      margin: 0 auto;
+      border-top: 1px solid #222222;
+      background: #111111;
+      border-radius: 12px;
+      margin-top: 4rem;
+    }
+
+    .contact-direct-message {
+      margin-bottom: 2rem;
+    }
+
+    .contact-direct-message h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .contact-direct-message p {
+      font-size: 1rem;
+      color: #cccccc;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    .contact-direct-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-direct-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      background: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-direct-btn:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+    }
+
+    .contact-direct-btn.whatsapp {
+      background: #000000;
+      color: #ffffff;
+      border: 1px solid #333333;
+    }
+
+    .contact-direct-btn.whatsapp:hover {
+      background: #111111;
+      border-color: #555555;
+    }
+
+    /* Contact/Profile Horizontal Section */
+    .contact-direct-horizontal {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .profile-card-horizontal {
+      background: #111111;
+      border: 1px solid #222222;
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .profile-image-horizontal {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #333333;
+      transition: all 0.3s ease;
+    }
+
+    .profile-card-horizontal:hover .profile-image-horizontal {
+      border-color: #ffffff;
+    }
+
+    .profile-info-horizontal {
+      flex: 1;
+    }
+
+    .contact-card-horizontal {
+      background: #111111;
+      border: 1px solid #222222;
+      border-radius: 12px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .contact-card-horizontal::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #ffffff;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .contact-card-horizontal:hover::before {
+      transform: scaleX(1);
+    }
+
+    .contact-card-horizontal:hover {
+      transform: translateY(-5px);
+      border-color: #333333;
+    }
+
+    .contact-title-horizontal {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .contact-desc-horizontal {
+      font-size: 0.9rem;
+      color: #cccccc;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .contact-direct-buttons-horizontal {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-direct-btn-horizontal {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      background: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-direct-btn-horizontal:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+    }
+
+    .contact-direct-btn-horizontal.whatsapp {
+      background: #000000;
+      color: #ffffff;
+      border: 1px solid #333333;
+    }
+
+    .contact-direct-btn-horizontal.whatsapp:hover {
+      background: #111111;
+      border-color: #555555;
+    }
+
+    /* Footer */
+    .footer, .footer-content {
+      all: unset;
+    }
+    .site-footer {
+      width: 100%;
+      background: linear-gradient(90deg, #181818 60%, #232526 100%);
+      color: #fff;
+      padding: 40px 0 18px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.05rem;
+      margin-top: 0;
+      border-top: 1.5px solid #222;
+      box-shadow: 0 -2px 24px rgba(0,0,0,0.10);
+    }
+    .site-footer .footer-content {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      padding: 0 32px;
+      text-align: center;
+    }
+    .site-footer .footer-logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10));
+    }
+    .site-footer .footer-info {
+      flex: 1;
+      text-align: center;
+      font-size: 1.08rem;
+      opacity: 0.85;
+      letter-spacing: 0.1px;
+      line-height: 1.5;
+    }
+    .site-footer .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+    .site-footer .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.05rem;
+      opacity: 0.8;
+      transition: opacity 0.2s, color 0.2s;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .site-footer .footer-links a:hover {
+      opacity: 1;
+      color: #4ecdc4;
+      background: rgba(78,205,196,0.08);
+    }
+    @media (max-width: 700px) {
+      .site-footer .footer-content {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 10px;
+      }
+      .site-footer .footer-logo-img {
+        height: 32px;
+      }
+      .site-footer .footer-info {
+        font-size: 0.98rem;
+      }
+      .site-footer .footer-links {
+        gap: 10px;
+      }
+      .site-footer .footer-links a {
+        font-size: 0.98rem;
+        padding: 4px 8px;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-content {
+        padding: 0 1rem;
+      }
+
+      .hero-images {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+
+      .hero-image {
+        width: 80px;
+        height: 100px;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .contact-direct-horizontal {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* Smooth Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav">
+    <div class="nav-content">
+      <div class="logo" style="flex: none; align-items: flex-start; text-align: left;">
+        <img src="assets/deepvisage-logo.png" alt="Deep Visage Logo" class="logo-img">
+      </div>
+      <div class="logo-text nav-center">DEEP VISAGE</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="about-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-images">
+        <img src="assets/about/profile1.jpg" alt="Max Schulte Photography" class="hero-image">
+        <img src="assets/about/profile2.jpg" alt="Max Schulte Photography" class="hero-image hero-image-horizontal">
+        <img src="assets/about/profile3.jpg" alt="Max Schulte Photography" class="hero-image">
+      </div>
+      
+      <h1 class="hero-title">about us</h1>
+      
+      <p class="hero-description">
+        I am a creative photographer and videographer specializing in authentic narratives and compelling imagery. From fashion shoots to corporate events and music videos, I capture the true essence of my clients through photo, drone, and video production.
+      </p>
+      
+      <p class="hero-tagline">
+        Have you seen the depth of a story untold?
+      </p>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+      <h2 class="team-title">the team</h2>
+      <div class="team-grid team-grid-duo">
+        <div class="profile-card duo-card fade-in">
+          <img src="assets/about/profile1.jpg" alt="Max Schulte" class="profile-image">
+          <h3 class="profile-name">Max Schulte</h3>
+          <p class="profile-role">Co-founder / Director</p>
+          <p class="profile-bio">
+            Visual storyteller with 10+ years of experience. From weddings to documentaries (Amazon Prime), I seek the truest angle in every project. My work unequally blends technical precision and human insight, always buscando profundidade e colaboração real.
+          </p>
+        </div>
+        <div class="profile-card duo-card fade-in">
+          <img src="assets/about/profile2.jpg" alt="Luiza Maneira Zappulla" class="profile-image">
+          <h3 class="profile-name">Luiza Maneira Zappulla</h3>
+          <p class="profile-role">Co-founder / Creative & Commercial</p>
+          <p class="profile-bio">
+            Creative director and business strategist. I connect ideas to execution, shaping campaigns and productions across continents. At Deep Visage, I ensure every project is authentic, powerful, and emotionally resonant.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+  </script>
+</body>
+</html>
